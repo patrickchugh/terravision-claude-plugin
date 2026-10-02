@@ -1,0 +1,18 @@
+{
+  "name": "terravision-cloud-diagrams",
+  "displayName": "TerraVision Cloud Diagrams",
+  "description": "Draw cloud architecture diagrams with the official AWS, Azure and GCP icons from a plain description, a JSON graph or Terraform code, then write the Terraform for a design.",
+  "version": "1.6.0",
+  "author": { "name": "Patrick Chugh", "url": "https://github.com/patrickchugh" },
+  "homepage": "https://patrickchugh.github.io/terravision/",
+  "repository": "https://github.com/patrickchugh/terravision-claude-plugin",
+  "license": "AGPL-3.0-only",
+  "keywords": ["aws", "azure", "gcp", "cloud", "architecture", "diagram", "terraform", "drawio"],
+  "skills": ["./skills/terravision-cloud-diagrams"],
+  "mcpServers": {
+    "terravision": {
+      "command": "uvx",
+      "args": ["--from", "terravision[mcp]==0.52.0", "terravision", "mcp", "--output-dir", "./diagrams"]
+    }
+  }
+}
