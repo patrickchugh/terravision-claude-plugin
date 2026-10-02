@@ -2,7 +2,7 @@
 
 TerraVision can draw a professional cloud architecture diagram from a plain JSON file, with no Terraform code and no cloud credentials. This is the fastest way for a person or an AI agent to get a diagram that uses the official AWS, Azure and GCP icon sets and industry-standard grouping (VPCs, subnets, resource groups, regions, zones).
 
-Schema: `https://patrickchugh.github.io/terravision/schemas/terravision-graph-1.0.schema.json`
+Schema: `terravision-graph.schema.json`, bundled in this folder
 
 ## The format in one paragraph
 
