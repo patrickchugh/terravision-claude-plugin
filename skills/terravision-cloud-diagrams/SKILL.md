@@ -44,9 +44,9 @@ Check what is already there: `terravision --version`, `dot -V` (Graphviz) and `g
 
 | Available | Command |
 |---|---|
-| `uv` | `uv tool install terravision`. uv fetches a suitable Python itself. To run without installing, prefix commands with `uvx`: `uvx terravision draw ...` |
-| `pipx` | `pipx install terravision` |
-| only `pip` | `python3 -m pip install --user terravision` (Windows: `py -m pip install --user terravision`). If pip refuses with `externally-managed-environment`, install into a virtual environment instead: `python3 -m venv ~/.venvs/terravision && ~/.venvs/terravision/bin/pip install terravision`, then run `~/.venvs/terravision/bin/terravision` (Windows: `py -m venv %USERPROFILE%\.venvs\terravision`, then use `%USERPROFILE%\.venvs\terravision\Scripts\terravision`) |
+| `uv` | `uv tool install terravision==0.52.0`. uv fetches a suitable Python itself. To run without installing, prefix commands with `uvx`: `uvx terravision==0.52.0 draw ...` |
+| `pipx` | `pipx install terravision==0.52.0` |
+| only `pip` | `python3 -m pip install --user terravision==0.52.0` (Windows: `py -m pip install --user terravision==0.52.0`). If pip refuses with `externally-managed-environment`, install into a virtual environment instead: `python3 -m venv ~/.venvs/terravision && ~/.venvs/terravision/bin/pip install terravision==0.52.0`, then run `~/.venvs/terravision/bin/terravision` (Windows: `py -m venv %USERPROFILE%\.venvs\terravision`, then use `%USERPROFILE%\.venvs\terravision\Scripts\terravision`) |
 | none of these | Install uv (https://docs.astral.sh/uv/getting-started/installation/), then use the first row |
 
 If `terravision` is installed but not found, its folder is not on PATH: run `uv tool update-shell` or `pipx ensurepath` and open a new terminal, or call it by its full path.
@@ -175,7 +175,7 @@ TerraVision draws exactly what it is given. When a diagram looks wrong, assume t
 ## Troubleshooting
 
 - `'dot'` or `'git'` not found: see Install.
-- `'terraform' not found` while using a `.json` source, or `No such option: --title`: TerraVision is too old. Upgrade with the tool that installed it: `uv tool upgrade terravision`, `pipx upgrade terravision` or `python3 -m pip install -U terravision`.
+- `'terraform' not found` while using a `.json` source, or `No such option: --title`: TerraVision is too old. Upgrade with the tool that installed it: `uv tool install --force terravision==0.52.0`, `pipx install --force terravision==0.52.0` or `python3 -m pip install --user terravision==0.52.0`.
 - `Graph mixes aws_* and azurerm_* resources`: split the graph into one file per provider.
 - An arrow is missing: see "Drawn as written" above.
 - Icon looks generic: the type name is not in `references/node-types.md`; pick the closest listed type.
